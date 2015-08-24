@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Finstagram </title>
+  </head>
+  <body>
+    <h1> Finstagram </h1>
+    <h2> Cause We Care About What You Eat Every Meal </h2>
+    <ul>
+      <% @posts.each do |post|%>
+      <li>Username: <%=post.username%> - Caption: <%=post.caption %></li>
+      <% end %>
+    </ul>
+    <form action="/new_post" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input name="username" type="text" class="form-control" id="username" placeholder="username">
+      </div>
+      <div class="form-group">
+        <label for="post">Caption</label>
+        <input name="post" type='text' class="form-control" id="post" placeholder="post">
+      </div>
+      <button type="submit" class="btn btn-default pull-right">Submit</button>
+      <div class="form-group">
+      <input name="picture" type='text' class="form-control" id="picture" placeholder="picture"
+    </form>
+  </body>
